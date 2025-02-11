@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema[7.2].define(version: 2025_02_10_183003) do
   create_table "movies", force: :cascade do |t|
-    t.string "title"
+    t.string "title", unique: true
     t.string "rating"
     t.text "description"
     t.datetime "release_date"
