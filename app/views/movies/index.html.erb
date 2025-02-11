@@ -4,13 +4,12 @@
 
 <h1>Movies</h1>
 
-<table>
+<table id="movies-table">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Rating</th>
-      <th>Release Date</th>
-      <th></th>
+      <th data-sortable="title">Title</th>
+      <th data-sortable="rating">Rating</th>
+      <th data-sortable="release_date">Release Date</th>
     </tr>
   </thead>
 
@@ -24,7 +23,6 @@
     <% end %>
   </tbody>
 
-
   <tfoot>
     <tr>
       <td colspan="3"><%= pluralize(@movies.size, 'Movie') %> Found</td>
@@ -32,4 +30,4 @@
   </tfoot>
 </table>
 
-<%= link_to "New movie", new_movie_path %>
+<%= link_to "New movie", new_movie_path, class: "new-movie-link" %>
